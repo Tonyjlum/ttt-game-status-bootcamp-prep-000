@@ -32,6 +32,4 @@ def winner(board)
   symbol = won?(board)
   return nil unless symbol
   board[symbol.first]
-
-
 end
