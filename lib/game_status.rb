@@ -7,6 +7,7 @@ end
 WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4,2]]
 
 def won?(board)
+<<<<<<< HEAD
   WIN_COMBINATIONS.each do |set|
     return set if board[set[0]] == board[set[1]] && 
     board[set[1]] == board[set[2]] && 
@@ -32,4 +33,10 @@ def winner(board)
   symbol = won?(board)
   return nil unless symbol
   board[symbol.first]
+=======
+  return false if board.all?{|el| el == " "}
+
+  WIN_COMBINATIONS.find { |set| set.all? {|el| el == "X"}}
+
+>>>>>>> b586d6d8416c86fd746464c7c802bb8ad47da10a
 end
