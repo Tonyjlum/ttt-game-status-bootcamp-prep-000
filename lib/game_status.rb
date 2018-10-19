@@ -33,10 +33,5 @@ def winner(board)
   symbol = won?(board)
   return nil unless symbol
   board[symbol.first]
-=======
-  return false if board.all?{|el| el == " "}
 
-  WIN_COMBINATIONS.find { |set| set.all? {|el| el == "X"}}
-
->>>>>>> b586d6d8416c86fd746464c7c802bb8ad47da10a
 end
